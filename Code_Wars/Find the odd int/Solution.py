@@ -1,11 +1,10 @@
 def find_it(seq):
-    counters={}
+    counters = {}
     for i in seq:
-        counters[i]=seq.count(i)
+        counters[i] = seq.count(i)
     for i in counters.items():
-        if i[1]%2!=0:
+        if i[1] % 2 != 0:
             return i[0]
-        
 
     """
     Given an array of integers, find the one that appears an odd number of times.

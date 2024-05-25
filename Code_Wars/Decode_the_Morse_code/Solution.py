@@ -12,21 +12,21 @@ MORSE_CODE = {
     '.-..-.': '"', '...-..-': '$', '.--.-.': '@', '...---...': 'SOS'
 }
 
+
 def decode_morse(morse_code):
     # Remember - you can use the preloaded MORSE_CODE dictionary:
     # For example: 
     # MORSE_CODE['.-'] = 'A'
     # MORSE_CODE['--...'] = '7'
     # MORSE_CODE['...-..-'] = '$'
-    s=""
-    tab=morse_code.lstrip().rstrip().split(" ")
-    for z,i in enumerate(tab):
+    s = ""
+    tab = morse_code.lstrip().rstrip().split(" ")
+    for z, i in enumerate(tab):
         if i != "":
-            s+=MORSE_CODE[str(i)]
+            s += MORSE_CODE[str(i)]
         else:
-            if z<len(tab)-1:   
-                if tab[z+1]=="":
-                    s+=" "
-    
+            if z < len(tab) - 1:
+                if tab[z + 1] == "":
+                    s += " "
+
     return s
-            
